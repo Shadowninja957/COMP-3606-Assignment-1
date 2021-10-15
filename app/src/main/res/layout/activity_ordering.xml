@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".OrderingActivity" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <RadioGroup
+            android:id="@+id/radio_group_flavours"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/radio_chocolate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chocolate" />
+
+            <RadioButton
+                android:id="@+id/radio_vanilla"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vanilla" />
+
+            <RadioButton
+                android:id="@+id/radio_strawberry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/strawberry" />
+
+            <RadioButton
+                android:id="@+id/radio_cookies_cream"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cookies_cream" />
+
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/toppings_sprinkles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sprinkles" />
+
+        <CheckBox
+            android:id="@+id/toppings_chocolate_sprinkles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chocolate_sprinkles" />
+
+        <CheckBox
+            android:id="@+id/toppings_gummy_bears"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gummy_bears" />
+
+        <CheckBox
+            android:id="@+id/toppings_whipped_cream"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/whipped_cream" />
+
+        <CheckBox
+            android:id="@+id/toppings_oreos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/oreos" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_scoops"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/scoop1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/one_scoop" />
+
+            <RadioButton
+                android:id="@+id/scoop2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/two_scoops" />
+
+            <RadioButton
+                android:id="@+id/scoop3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/three_scoops" />
+
+        </RadioGroup>
+
+        <Switch
+            android:id="@+id/syrup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="@string/caramel"
+            android:textOff="@string/chocolate_syrup"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

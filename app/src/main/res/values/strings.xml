@@ -1,3 +1,29 @@
 <resources>
     <string name="app_name">Product Ordering</string>
+    
+    <!-- Flavours -->
+    <string name="chocolate">Chocolate</string>
+    <string name="vanilla">Vanilla</string>
+    <string name="strawberry">Strawberry</string>
+    <string name="cookies_cream">Cookies and Cream</string>
+    
+    <!-- Toppings -->
+    <string name="sprinkles">Sprinkles</string>
+    <string name="chocolate_sprinkles">Chocolate Sprinkles</string>
+    <string name="gummy_bears">Gummy Bears</string>
+    <string name="whipped_cream">Whipped Cream</string>
+    <string name="oreos">Oreos</string>
+
+    <!-- Scoops -->
+    <string name="one_scoop">1 Scoop</string>
+    <string name="two_scoops">2 Scoops</string>
+    <string name="three_scoops">3 Scoops</string>
+
+    <!-- Syrup -->
+    <string name="caramel">Caramel</string>
+    <string name="chocolate_syrup">Chocolate</string>
+
+    <!-- Buttons -->
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="complete_order">Complete Order</string>
 </resources>
