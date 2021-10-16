@@ -1,12 +1,12 @@
 <resources>
     <string name="app_name">Product Ordering</string>
-    
+
     <!-- Flavours -->
     <string name="chocolate">Chocolate</string>
     <string name="vanilla">Vanilla</string>
     <string name="strawberry">Strawberry</string>
     <string name="cookies_cream">Cookies and Cream</string>
-    
+
     <!-- Toppings -->
     <string name="sprinkles">Sprinkles</string>
     <string name="chocolate_sprinkles">Chocolate Sprinkles</string>
@@ -26,4 +26,5 @@
     <!-- Buttons -->
     <string name="add_to_cart">Add to Cart</string>
     <string name="complete_order">Complete Order</string>
+    <string name="display_order">Display Order</string>
 </resources>

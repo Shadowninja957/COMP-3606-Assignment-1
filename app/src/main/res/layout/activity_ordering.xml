@@ -10,10 +10,12 @@
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo"/>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="386dp"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="16dp">
@@ -22,30 +24,34 @@
             android:id="@+id/radio_group_flavours"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <RadioButton
                 android:id="@+id/radio_chocolate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
                 android:text="@string/chocolate" />
 
             <RadioButton
                 android:id="@+id/radio_vanilla"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
                 android:text="@string/vanilla" />
 
             <RadioButton
                 android:id="@+id/radio_strawberry"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
                 android:text="@string/strawberry" />
 
             <RadioButton
                 android:id="@+id/radio_cookies_cream"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
                 android:text="@string/cookies_cream" />
 
         </RadioGroup>
@@ -84,7 +90,7 @@
             android:id="@+id/radio_group_scoops"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <RadioButton
                 android:id="@+id/scoop1"
@@ -110,11 +116,9 @@
             android:id="@+id/syrup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textOn="@string/caramel"
             android:textOff="@string/chocolate_syrup"
+            android:textOn="@string/caramel"
             tools:ignore="UseSwitchCompatOrMaterialXml" />
-
-
 
 
     </LinearLayout>

@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProductOrdering">
         <activity
+            android:name=".FinalOrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CompleteOrderActivity"
+            android:exported="false" />
+        <activity
             android:name=".OrderingActivity"
             android:exported="true">
             <intent-filter>

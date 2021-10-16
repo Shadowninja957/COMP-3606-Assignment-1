@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CompleteOrderActivity">
+
+    <Button
+        android:id="@+id/completeButton"
+        android:layout_width="121dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="151dp"
+        android:layout_marginTop="28dp"
+        android:onClick="checkButton"
+        android:text="@string/complete_order"
+        app:layout_constraintStart_toEndOf="@+id/displayButton"
+        app:layout_constraintTop_toBottomOf="@+id/OrderDisplay" />
+
+    <Button
+        android:id="@+id/displayButton"
+        android:layout_width="107dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="28dp"
+        android:Layout_width="wrap_content"
+        android:onClick="checkedButton"
+        android:text="@string/display_order"
+        app:layout_constraintTop_toBottomOf="@+id/OrderDisplay"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <TextView
+        android:id="@+id/OrderDisplay"
+        android:layout_width="379dp"
+        android:layout_height="592dp"
+        android:text="@string/display_order"
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="30dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
