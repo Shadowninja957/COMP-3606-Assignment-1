@@ -14,6 +14,7 @@
         android:scaleType="centerCrop"
         android:alpha="0.5"
         android:src="@drawable/logo"/>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
@@ -127,11 +128,11 @@
                 android:fontFamily="sans-serif-condensed"
                 tools:ignore="UseSwitchCompatOrMaterialXml" />
 
-            <ImageButton
+            <Button
                 android:id="@+id/add_to_cart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_action_name"
+                android:text="@string/add_to_cart"
                 android:onClick="onAddToCart"
                 tools:ignore="ContentDescription,UsingOnClickInXml" />
 

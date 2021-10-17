@@ -2,10 +2,16 @@ package com.example.productordering;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
+import android.content.ComponentName;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -38,6 +44,23 @@ public class CompleteOrderActivity extends AppCompatActivity {
         }
 
         textView.setText(list_orders.toString());
+    }
+
+
+    public void onSendOrder(View view){
+
+        TextView textView = (TextView) findViewById(R.id.completed_order);
+        String text = textView.getText().toString();
+
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, text);
+        sendIntent.setType("text/plain");
+        sendIntent.setPackage("com.whatsapp");
+        if (sendIntent.resolveActivity(getPackageManager()) != null) {
+            startActivity(sendIntent);
+        }
+
     }
 
 }
