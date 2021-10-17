@@ -12,8 +12,12 @@
         android:layout_height="65dp"
         android:layout_marginStart="151dp"
         android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:onClick="checkButton"
         android:text="@string/complete_order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/displayButton"
         app:layout_constraintTop_toBottomOf="@+id/OrderDisplay" />
 
@@ -22,20 +26,28 @@
         android:layout_width="107dp"
         android:layout_height="60dp"
         android:layout_marginTop="28dp"
-        android:Layout_width="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="21dp"
         android:onClick="checkedButton"
         android:text="@string/display_order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/completeButton"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/OrderDisplay"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/OrderDisplay"
         android:layout_width="379dp"
         android:layout_height="592dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
         android:text="@string/display_order"
         android:textSize="14sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="30dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -20,8 +20,8 @@
     <string name="three_scoops">3 Scoops</string>
 
     <!-- Syrup -->
-    <string name="caramel">Caramel</string>
-    <string name="chocolate_syrup">Chocolate</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 
     <!-- Buttons -->
     <string name="add_to_cart">Add to Cart</string>

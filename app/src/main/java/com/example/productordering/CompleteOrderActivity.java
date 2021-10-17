@@ -12,16 +12,5 @@ public class CompleteOrderActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_complete_order);
-
-    }
-    public void checkedButton(View view){
-
-    }
-    public void checkButton(View view){
-        openFinalActivity();
-    }
-    public void openFinalActivity(){
-        Intent intent = new Intent(this, FinalOrderActivity.class);
-        startActivity(intent);
     }
 }
