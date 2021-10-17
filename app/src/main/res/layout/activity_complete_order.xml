@@ -6,40 +6,33 @@
     android:layout_height="match_parent"
     tools:context=".CompleteOrderActivity">
 
-    <Button
-        android:id="@+id/completeButton"
-        android:layout_width="121dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="151dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:onClick="checkButton"
-        android:text="@string/complete_order"
+    <ImageButton
+        android:id="@+id/send_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="47dp"
+        android:background="@drawable/ic_send_order"
+        android:text="@string/send_order"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/displayButton"
-        app:layout_constraintTop_toBottomOf="@+id/OrderDisplay" />
+        tools:ignore="ContentDescription,UsingOnClickInXml" />
 
-    <Button
-        android:id="@+id/displayButton"
-        android:layout_width="107dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="21dp"
-        android:onClick="checkedButton"
-        android:text="@string/display_order"
+    <ImageButton
+        android:id="@+id/display_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="28dp"
+        android:src="@drawable/ic_display_order"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/completeButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/OrderDisplay"
-        app:layout_constraintVertical_bias="1.0" />
+        tools:ignore="ContentDescription,UsingOnClickInXml" />
 
     <TextView
-        android:id="@+id/OrderDisplay"
-        android:layout_width="379dp"
-        android:layout_height="592dp"
+        android:id="@+id/completed_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="16dp"

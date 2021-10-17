@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -13,9 +15,11 @@ import android.widget.Switch;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class OrderingActivity extends AppCompatActivity {
 
+    private ArrayList<Order> orders = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,8 +105,30 @@ public class OrderingActivity extends AppCompatActivity {
             String ice_scoop = ice_cream_scoop.getText().toString();
 
             Order order = new Order(ice_flavour, toppings, ice_scoop, syrup);
+            orders.add(order);
+
+            Context context = getApplicationContext();
+            CharSequence text = "Order Added";
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
 
         }
 
     }
+
+    public void onCompleteOrder(View view){
+
+        Intent intent = new Intent(this, CompleteOrderActivity.class);
+        Bundle bundle = new Bundle();
+        for (int i = 0; i<orders.size(); i++) {
+            bundle.putSerializable(CompleteOrderActivity.EXTRA_ORDERS+i, orders.get(i));
+        }
+        intent.putExtras(bundle);
+        startActivity(intent);
+
+    }
+
+
 }

@@ -1,5 +1,7 @@
 package com.example.productordering;
 
+import androidx.annotation.NonNull;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -30,5 +32,14 @@ public class Order implements Serializable {
 
     public ArrayList<String> getToppings() {
         return toppings;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return "Order: \n" +
+                " " + flavour + '\n' +
+                "toppings=" + toppings + " " + scoops + '\n' +
+                " syrup:'" + syrup + '\n';
     }
 }

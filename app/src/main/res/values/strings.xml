@@ -20,6 +20,7 @@
     <string name="three_scoops">3 Scoops</string>
 
     <!-- Syrup -->
+    <string name="syrup">Syrup</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
 
@@ -27,4 +28,5 @@
     <string name="add_to_cart">Add to Cart</string>
     <string name="complete_order">Complete Order</string>
     <string name="display_order">Display Order</string>
+    <string name="send_order">Send Order</string>
 </resources>
