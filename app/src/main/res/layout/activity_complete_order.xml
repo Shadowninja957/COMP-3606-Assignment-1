@@ -22,6 +22,7 @@
         android:id="@+id/display_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="onDisplayOrder"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="16dp"
         android:text="@string/display_order"
@@ -29,18 +30,22 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="ContentDescription,UsingOnClickInXml" />
 
-    <TextView
-        android:id="@+id/completed_order"
+    <ScrollView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/display_order"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="wrap_content" >
+        <TextView
+            android:id="@+id/completed_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/display_order"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
