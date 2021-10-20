@@ -38,45 +38,16 @@ public class CompleteOrderActivity extends AppCompatActivity {
             orders.add((Order) bundle.getSerializable(key));
         }
 
-        Context context = getApplicationContext();
         TextView textView = (TextView) findViewById(R.id.completed_order);
         StringBuilder list_orders = new StringBuilder();
 
+        for (Order order : orders) {
+            list_orders.append(order.toString());
+            list_orders.append("\n");
 
-            // Serialization
-            try
-            {
+        }
 
-                FileOutputStream file = context.openFileOutput(filename, Context.MODE_PRIVATE);
-                ObjectOutputStream out = new ObjectOutputStream(file);
-
-                for (Order order : orders) {
-                    list_orders.append(order.toString());
-                    list_orders.append("\n");
-
-                    out.writeObject(order);
-                }
-
-                out.close();
-                file.close();
-
-                CharSequence text = "Object has been serialized";
-                int duration = Toast.LENGTH_SHORT;
-
-                Toast toast = Toast.makeText(context, text, duration);
-                toast.show();
-
-                textView.setText(list_orders.toString());
-            }
-
-            catch(IOException ex)
-            {
-                CharSequence text = "IOException is caught";
-                int duration = Toast.LENGTH_SHORT;
-
-                Toast toast = Toast.makeText(context, text, duration);
-                toast.show();
-            }
+        textView.setText(list_orders.toString());
 
     }
 
@@ -135,11 +106,11 @@ public class CompleteOrderActivity extends AppCompatActivity {
             Intent intent = new Intent(this, DisplayOrderActivity.class);
             intent.putExtra(PAST_ORDERS, list_orders.toString());
 
-            CharSequence text = "Object has been deserialized";
+          /*  CharSequence text = "Object has been deserialized";
             int duration = Toast.LENGTH_SHORT;
 
             Toast toast = Toast.makeText(context, text, duration);
-            toast.show();
+            toast.show();*/
 
             startActivity(intent);
 

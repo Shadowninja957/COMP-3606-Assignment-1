@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,5 +28,15 @@ public class DisplayOrderActivity extends AppCompatActivity {
 
     }
 
+    public void onHome(View view){
+
+        Context context = getApplicationContext();
+        CharSequence text = "All Past Orders";
+        int duration = Toast.LENGTH_SHORT;
+
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
+
+    }
 
 }
