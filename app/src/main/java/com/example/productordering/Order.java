@@ -37,9 +37,15 @@ public class Order implements Serializable {
     @NonNull
     @Override
     public String toString() {
-        return "Order: \n" +
-                " " + flavour + '\n' +
-                "toppings=" + toppings + " " + scoops + '\n' +
-                " syrup:'" + syrup + '\n';
+
+        StringBuilder list_orders = new StringBuilder();
+        for (String s : this.toppings){
+            list_orders.append(s);
+            list_orders.append(" ");
+        }
+
+        return " " + flavour + '\n' +
+                " toppings: " + list_orders.toString() + '\n' + scoops + '\n' +
+                " syrup: " + syrup + '\n';
     }
 }

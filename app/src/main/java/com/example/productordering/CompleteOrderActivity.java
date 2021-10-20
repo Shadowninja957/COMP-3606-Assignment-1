@@ -41,6 +41,7 @@ public class CompleteOrderActivity extends AppCompatActivity {
         TextView textView = (TextView) findViewById(R.id.completed_order);
         StringBuilder list_orders = new StringBuilder();
 
+        list_orders.append("Order: \n");
         for (Order order : orders) {
             list_orders.append(order.toString());
             list_orders.append("\n");
@@ -60,6 +61,7 @@ public class CompleteOrderActivity extends AppCompatActivity {
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
         sendIntent.putExtra(Intent.EXTRA_TEXT, text);
+        sendIntent.setPackage("com.whatsapp");
         sendIntent.setType("text/plain");
         startActivity(sendIntent);
 
@@ -97,7 +99,7 @@ public class CompleteOrderActivity extends AppCompatActivity {
 
 
             StringBuilder list_orders = new StringBuilder();
-
+            list_orders.append("Order: \n");
             for (Order order : orders) {
                 list_orders.append(order.toString());
                 list_orders.append("\n");

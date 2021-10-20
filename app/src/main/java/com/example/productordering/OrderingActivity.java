@@ -8,7 +8,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+
 import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -19,11 +19,12 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
-import java.util.List;
+
 
 public class OrderingActivity extends AppCompatActivity {
 
     private ArrayList<Order> orders = new ArrayList<>();
+    private boolean cart_saved = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +47,31 @@ public class OrderingActivity extends AppCompatActivity {
             bundle.putSerializable(CompleteOrderActivity.EXTRA_ORDERS+i, orders.get(i));
         }
         savedInstanceState.putBundle("Orders", bundle);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        CharSequence text = " ";
+        if (cart_saved){
+            text = "Cart is Saved";
+        }
+        else{
+            text = "Cart is Empty";
+        }
+        Context context = getApplicationContext();
+
+        int duration = Toast.LENGTH_SHORT;
+
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
+    }
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+        cart_saved = !orders.isEmpty();
     }
 
     public void onAddToCart(View view){
@@ -99,6 +125,7 @@ public class OrderingActivity extends AppCompatActivity {
         }
 
         // Syrup
+        @SuppressLint("UseSwitchCompatOrMaterialCode")
         Switch switch_syrup = (Switch) findViewById(R.id.syrup);
         boolean syrup_yes = switch_syrup.isChecked();
         String syrup = "No";
